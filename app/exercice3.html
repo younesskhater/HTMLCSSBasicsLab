@@ -1,1 +1,310 @@
-TODO
+
+  <html>
+
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Annonce immobilière</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" >
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="styles/style3.css">
+      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="bower_components/datepicker/css/datepicker.css">
+
+      <script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+      <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+      <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+      <script type="text/javascript" src="bower_components/datepicker/js/bootstrap-datepicker.js"></script>
+
+
+
+  </head>
+
+  <body>
+
+
+  <div class="container">
+    <h1> Annonce immobilière</h1>
+    <br>
+    <div id="myCarousel" class="carousel slide small col-md-offset-1" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item active">
+          <img src="styles/image1.jpg" alt="img1" width="460" height="380">
+          <div class="carousel-caption">
+            <h3></h3>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="styles/image2.jpg" alt="img2" width="460" height="380">
+          <div class="carousel-caption">
+            <h3></h3>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="styles/image3.jpg" alt="img3" width="460" height="380">
+          <div class="carousel-caption">
+            <h3></h3>
+            <p></p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </div>
+
+
+  <br><br>
+
+    <section id="insertion" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <form class="form-horizontal" action="#" method="post">
+                        <fieldset>
+
+                            <!-- Form Name -->
+                            <legend><b>Créer une nouvelle annonce</b></legend><br><br>
+
+                            <!-- input text: titre du bien-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="textinput">Titre</label>
+                                <div class="col-md-5">
+                                    <input  name="textinput" type="text" placeholder="Veuillez saisir un titre" class="form-control input-md" required>
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- input text:prix du bien-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="textinput">Prix du bien</label>
+                                <div class="col-md-5">
+                                  <div class='input-group' >
+                                    <input  name="textinput" type="text" placeholder="Veuillez saisir un prix" class="form-control input-md" required>
+                                    <span class="input-group-addon">
+                                        <span>$</span>
+                                    </span>
+                                  </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- Calandrier Basic
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="selectbasic">Date</label>
+                                <div class="col-md-5">
+                                  <div class='input-group date' data-date-format="dd-mm-yyyy" id='datetimepicker1'>
+                                      <input type='text' class="form-control" />
+                                      <span class="input-group-addon">
+                                          <span class="glyphicon glyphicon-calendar"></span>
+                                      </span>
+                                  </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker();
+                                    });
+                                </script>
+                              </div>
+                         </div>
+                          -->
+
+                    <!-- Calandrier Basic: date de disponibilité-->
+                         <div class="form-group">
+                             <label class="col-md-4 control-label" for="selectbasic">Date de disponibilité</label>
+                             <div class="col-md-5">
+                            <div class="input-group date" id="datepicker1" data-date="" data-date-format="dd-mm-yyyy" >
+				                        <input class="form-control" size="16" type="text" required />
+				                  <span class="add-on input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </span>
+			                     </div>
+                             <script type="text/javascript">
+                                 $(function () {
+                                     $('#datepicker1').datepicker();
+                                 });
+                             </script>
+                           </div>
+                      </div>
+                        <br>
+                 <!-- input text:surface du bien-->
+                      <div class="form-group">
+                          <label class="col-md-4 control-label" for="textinput">Surface du bien</label>
+                          <div class="col-md-5">
+                            <div class='input-group' >
+                              <input  name="textinput" type="text" placeholder="Veuillez saisir une surface" class="form-control input-md" required>
+                              <span class="input-group-addon">
+                                  <span>m<sup>2</sup></span>
+                              </span>
+                            </div>
+                          </div>
+                      </div>
+                      <br>
+
+                      <!-- input text:type du bien-->
+                      <div class="form-group">
+                          <label class="col-md-4 control-label" for="textinput">Type de bien</label>
+                          <div class="col-md-5">
+                              <input  name="textinput" type="text" placeholder="Veuillez saisir le type" class="form-control input-md" required>
+                          </div>
+                      </div>
+                           <br>
+                         <!-- input text:ce qu'il y a dans le bien-->
+                           <div class="form-group">
+                              <label class="col-md-4 control-label" for="textinput">Contient</label><br>
+                        <div class="col-md-5">
+
+                           <div class="input-group">
+                             <label>
+                               <input type="checkbox" value="">
+                               Garage
+                            </label>
+                          </div>
+                          <div class="input-group">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span>Cave</span>
+                            </label>
+                          </div>
+                          <div class="input-group">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span>Jacuzzi</span>
+                            </label>
+                          </div>
+                          <div class="input-group">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span>Terrasse</span>
+                            </label>
+                          </div>
+
+                          <div class="input-group">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span>Balcon</span>
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                         <br>
+                         <div class="form-group">
+                             <label class="col-md-4 control-label" for="textarea">Annonce</label>
+                             <div class="col-md-5">
+                         <textarea class="form-control" rows="5" id="annonce" placeholder="Veuillez saisir votre annonce..." required></textarea>
+                             </div>
+                         </div>
+                         <br>
+
+                         <div class="form-group">
+                             <label class="col-md-4 control-label" for="image0">Images</label>
+                              <input type="file" name="image0" class="photosup_input_file upload_input" id="image0" accept="image/*" />
+                             <div class="col-md-10 col-md-offset-1">
+                               <br>
+                       <fieldset><legend>Votre images ici</legend>
+                         <div  id="imgstore"></div>
+                       </fieldset>
+                             </div>
+                         </div>
+
+                         <script>
+                         function imageHandler(e2)
+                         {
+                           var store = document.getElementById('imgstore');
+                           var img =store.innerHTML;
+                              img = img +'&nbsp;&nbsp;'+'<img src="' + e2.target.result +'">';
+
+                           store.innerHTML= img;
+                         }
+
+                         function loadimage(e1)
+                         {
+                           var filename = e1.target.files[0];
+                           var fr = new FileReader();
+                           fr.onload = imageHandler;
+                           fr.readAsDataURL(filename);
+                         }
+
+                         window.onload=function()
+                         {
+                           var y = document.getElementById("image0");
+                           y.addEventListener('change', loadimage, false);
+                         }
+                         </script>
+
+                           <br>
+                        </fieldset>
+                        <br><br>
+                        <div class="text-center" >
+                            <button type="submit" class="btn btn-success btn-lg" id="valid">Valider</button>&nbsp;&nbsp;
+                            <a href="#top"><button type="reset" onclick="vide()" class="btn btn-danger btn-lg">Annuler</button></a>
+                            <script>
+                              function vide(){
+                                var images =document.getElementById('imgstore');
+                                images.innerHTML='';
+                              }
+                            </script>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+
+    <br><br>
+    <footer>
+        <section id="contributors" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center">
+                        <ul class="list-inline">
+    			                  <li>
+                                <a target="_blank" href="http://www.github.com/younesskhater">Youness Khater</a>
+                            </li>
+                        </ul>
+                        <hr class="small">
+                        <p class="text-muted">Copyright &copy; || 2015-2016 - Tous droits r&eacute;serv&eacute;s</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+  </body>
+  </html>
